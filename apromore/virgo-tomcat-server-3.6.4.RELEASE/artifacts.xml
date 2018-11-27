@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.system' value='true'/>
+    <property name='p2.timestamp' value='1440725982553'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='64'>
+    <artifact classifier='osgi.bundle' id='org.slf4j.jcl' version='1.7.2.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='24226'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'>
+      <properties size='1'>
+        <property name='download.size' value='79641'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.common' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='58030'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.parser.launcher' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='8158'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='ch.qos.logback.core' version='1.0.7.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='389975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.sshd.core' version='0.5.0.v201108120515'>
+      <properties size='1'>
+        <property name='download.size' value='337822'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.artifact' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='48371'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.simpleconfigurator' version='1.0.300.v20110815-1744'>
+      <properties size='1'>
+        <property name='download.size' value='39451'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.springsource.org.apache.commons.codec' version='1.3.0'>
+      <properties size='1'>
+        <property name='download.size' value='47447'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.osgi' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='3192'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.equinox.extensions' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='24224'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.nano.core' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='194409'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.math' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='9504'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.parser.manifest' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='25708'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.medic' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='15246'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.springframework.context' version='3.1.0.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='829601'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.deployer' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='469891'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.cm' version='1.0.400.v20120319-2029'>
+      <properties size='1'>
+        <property name='download.size' value='63694'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.6.100.v20120509-1351'>
+      <properties size='1'>
+        <property name='download.size' value='106767'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.nano.deployer.hot' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='10253'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.springframework.expression' version='3.1.0.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='176283'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.kerneldmfragment' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='1505'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.springframework.aop' version='3.1.0.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='331474'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.command' version='0.10.0.v201209301215'>
+      <properties size='1'>
+        <property name='download.size' value='57040'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.console' version='1.0.100.v20121001-124408'>
+      <properties size='1'>
+        <property name='download.size' value='111253'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.jmx' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='4357'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='ch.qos.logback.classic' version='1.0.7.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='262120'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='osgi.enterprise' version='4.2.0.v201108120515'>
+      <properties size='1'>
+        <property name='download.size' value='159935'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.console.ssh' version='1.0.0.v20120430-1356'>
+      <properties size='1'>
+        <property name='download.size' value='53457'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.userregionfactory' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='15279'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gemini.blueprint.extender' version='1.0.2.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='173216'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.ds' version='1.4.0.v20120112-1400'>
+      <properties size='1'>
+        <property name='download.size' value='192844'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.springsource.org.aspectj.weaver' version='1.6.12.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='1765724'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.medic.core' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='93445'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gemini.management' version='1.0.5.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='101540'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.services' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='52218'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.io' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='30103'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.medic.logbackclassicfragment' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='1544'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gemini.blueprint.core' version='1.0.2.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='577734'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.8.2.v20130124-134944'>
+      <properties size='1'>
+        <property name='download.size' value='1397587'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.osgi' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='44870'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.repository' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='167278'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.agent.dm' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='26367'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.kernel.model' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='81541'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.util' version='1.0.300.v20111010-1614'>
+      <properties size='1'>
+        <property name='download.size' value='76832'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.slf4j.jul' version='1.7.2.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='11724'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='ch.qos.logback.slf4j' version='1.0.7.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='11053'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.mina.core' version='2.0.2.v201108120515'>
+      <properties size='1'>
+        <property name='download.size' value='671930'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.nano.management' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='8467'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.util.osgi.manifest' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='92756'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.management.fragment' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='2760'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.slf4j.api' version='1.7.2.v20121108-1250'>
+      <properties size='1'>
+        <property name='download.size' value='35173'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.nano.deployer.api' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='12804'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.shell' version='0.10.0.v201211091412'>
+      <properties size='1'>
+        <property name='download.size' value='60836'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.springsource.org.aopalliance' version='1.0.0'>
+      <properties size='1'>
+        <property name='download.size' value='4615'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.springsource.org.apache.commons.httpclient' version='3.1.0'>
+      <properties size='1'>
+        <property name='download.size' value='307965'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.gemini.blueprint.io' version='1.0.2.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='32065'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.springframework.core' version='3.1.0.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='442400'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.region' version='1.1.0.v20120319-1602'>
+      <properties size='1'>
+        <property name='download.size' value='71678'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.3.0.v20120307-2102'>
+      <properties size='1'>
+        <property name='download.size' value='81872'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.springframework.beans' version='3.1.0.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='589253'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.springframework.asm' version='3.1.0.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='53079'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.virgo.medic.logbackcorefragment' version='3.6.4.RELEASE'>
+      <properties size='1'>
+        <property name='download.size' value='1539'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.equinox.event' version='1.2.100.v20111010-1614'>
+      <properties size='1'>
+        <property name='download.size' value='32534'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>
