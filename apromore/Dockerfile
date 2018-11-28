@@ -10,10 +10,9 @@ RUN mkdir /opt/apromore
 COPY . /opt/apromore/
 
 RUN chown -R apromore:apromore /opt/apromore \
-&& chmod 777 /opt/apromore
+&& chmod -R 777 /opt/apromore
 
 WORKDIR /opt/apromore/
 USER apromore
 EXPOSE 9000
 CMD [ "./virgo-tomcat-server-3.6.4.RELEASE/bin/startup.sh", "-clean" ]
-
