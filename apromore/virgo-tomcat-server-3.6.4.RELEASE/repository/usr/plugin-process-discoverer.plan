@@ -1,0 +1,8 @@
+<plan name="org.apromore.plugin.process-discoverer" version="1.0.0" scoped="false" atomic="true" provisioning="auto"
+        xmlns="http://www.eclipse.org/virgo/schema/plan"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.eclipse.org/virgo/schema/plan http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
+
+	<artifact type="bundle" name="com.raffaeleconforti.apromore-process-discoverer" version="[1.0.20180719,1.0.20180719]"/>
+
+</plan>
