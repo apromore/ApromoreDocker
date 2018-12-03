@@ -34,7 +34,7 @@ Verify Docker Desktop is installed by running the following in cmd or terminal:
 
 ## Preparation
 Download lastest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
-Unzip `ApromoreDocker.zip` and change into ApromoreDocker folder ie. `cd ApromoreDocker`.  
+Unzip the downloaded file, open a cmd or terminal window and change into the ApromoreDocker-<version> folder.  
 
 ## Start Apromore Docker
 Run this command to start the Apromore Docker containers, it may take a few mintues the first time your run this.  
