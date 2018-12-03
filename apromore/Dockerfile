@@ -4,6 +4,7 @@ RUN groupadd -r apromore && useradd --no-log-init -r -g apromore apromore
 
 RUN apt-get -y update \
 && apt-get -y install openjdk-8-jre-headless \
+&& sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibility.properties \
 && apt-get -y install git \
 && apt-get -y install python3 \
 # && apt-get -y install sudo \
