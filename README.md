@@ -33,8 +33,8 @@ Verify Docker Desktop is installed by running the following in cmd or terminal:
 *Recommend increasing Docker resources to: cpu 4, memory 4096MB memory, swap 2048MB*
 
 ## Preparation
-Download lastest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
-Unzip the downloaded file, open a cmd or terminal window and change into the ApromoreDocker-<version> folder.  
+Download the lastest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
+Unzip the downloaded file, open a cmd or terminal window and change into the ApromoreDocker-*version* folder.  
 
 ## Start Apromore Docker
 Run this command to start the Apromore Docker containers, it may take a few mintues the first time your run this.  
