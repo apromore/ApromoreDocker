@@ -4,6 +4,11 @@ services:
     apromore:
         build: ./apromore
         image: apromore
+        volumes:
+            - "editor_repo:/opt/apromore/Editor-Repository"
+            - "event_logs_repo:/opt/apromore/Event-Logs-Repository"
+            - "filestore_repo:/opt/apromore/Filestore-Repository"
+            - "lucene_repo:/opt/apromore/Lucene-Repository"
         depends_on:
             - mysql
             - kafka
@@ -41,4 +46,8 @@ services:
             - "/var/run/docker.sock:/var/run/docker.sock"
             
 volumes:
-  mysql_data:
+    editor_repo:
+    event_logs_repo:
+    filestore_repo:
+    lucene_repo:
+    mysql_data:

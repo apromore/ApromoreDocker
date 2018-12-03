@@ -7,15 +7,22 @@ RUN apt-get -y update \
 && sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibility.properties \
 && apt-get -y install git \
 && apt-get -y install python3 \
+&& apt-get -y install python3-pip \
 # && apt-get -y install sudo \
 # && apt-get -y install telnet \
 # && apt-get -y install iputils-ping \
 && apt-get -y clean
 
 WORKDIR /opt/
-RUN git clone https://github.com/nirdizati/nirdizati-training-backend.git \
-&& chown -R apromore:apromore /opt/nirdizati-training-backend \
+RUN git clone https://github.com/nirdizati/nirdizati-training-backend.git
+
+WORKDIR /opt/nirdizati-training-backend/
+RUN pip3 install -r requirements.txt
+
+RUN chown -R apromore:apromore /opt/nirdizati-training-backend \
 && chmod -R 777 /opt/nirdizati-training-backend
+
+ENV PYTHONPATH=/opt/nirdizati-training-backend/
 
 RUN mkdir /opt/apromore
 COPY . /opt/apromore/
