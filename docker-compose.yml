@@ -5,15 +5,15 @@ services:
         build: ./apromore
         image: apromore
         volumes:
-            - "editor_repo:/opt/apromore/Editor-Repository"
-            - "event_logs_repo:/opt/apromore/Event-Logs-Repository"
-            - "filestore_repo:/opt/apromore/Filestore-Repository"
-            - "lucene_repo:/opt/apromore/Lucene-Repository"
+            - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
+            - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
+            - "./apromore/Filestore-Repository:/opt/apromore/Filestore-Repository"
+            - "./apromore/Lucene-Repository:/opt/apromore/Lucene-Repository"
         depends_on:
             - mysql
             - kafka
         ports:
-            - "9100:9000"
+            - "9000:9000"
 
     mysql:
         image: mysql:5.6.42
@@ -23,8 +23,7 @@ services:
             MYSQL_USER: apromore
             MYSQL_PASSWORD: MAcri
         volumes:
-            - "./mysql_init:/docker-entrypoint-initdb.d"
-            - "mysql_data:/var/lib/mysql"
+            - "./apromore/mysql-data:/var/lib/mysql"
         expose:
             - "3306"
 
@@ -45,9 +44,3 @@ services:
         volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
 
-volumes:
-    editor_repo:
-    event_logs_repo:
-    filestore_repo:
-    lucene_repo:
-    mysql_data:
