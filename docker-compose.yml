@@ -27,6 +27,9 @@ services:
         expose:
             - "3306"
 
+
+    # Following services are required for the Predictive Training plugin
+
     zookeeper:
         image: wurstmeister/zookeeper:3.4.6
         expose:
@@ -41,6 +44,20 @@ services:
             KAFKA_ADVERTISED_HOST_NAME: kafka
             KAFKA_ADVERTISED_PORT: "9092"
             KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+            KAFKA_CREATE_TOPICS: "events:1:1,prefixes:1:1,predictions:1:1,control:1:1"
         volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
 
+    nirdizati_collator:
+        build: ./nirdizati_collator
+        image: nirdizati_collator
+        depends_on:
+            - kafka
+
+    nirdizati_predict:
+        build: ./nirdizati_predict
+        image: nirdizati_predict
+        depends_on:
+            - kafka
+
+            

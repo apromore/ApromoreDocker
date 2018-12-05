@@ -28,6 +28,8 @@ This is a distribution of [Apromore](http://apromore.org/) that runs in Docker c
 Install Docker Desktop on your machine, get it from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).  
 *Note: Docker Desktop for Windows requires Windows 10 Pro*  
 
+Start Docker Desktop after installation.
+
 ### Configure Docker Desktop
 Right-click the Docker icon in the task bar, select Settings > Advanced.  
 Set cpu: 4, memory: 4096MB memory, swap: 2048MB
@@ -42,7 +44,7 @@ Run this to start the Apromore Docker containers, it may take a few mintues the 
 Windows - run `start.bat`  
 Mac / Linux - run `start.sh`  
 
-Open Apromote Web UI: [http://localhost:9000](http://localhost:9000) (admin / password)  
+Open Apromore Web UI: [http://localhost:9000](http://localhost:9000) (admin / password)  
 
 ## Stop Apromore Docker
 Run this to stop the Apromore Docker containers.  Your saved works on Apromore Docker will still be there next time you start it. 
@@ -50,8 +52,8 @@ Run this to stop the Apromore Docker containers.  Your saved works on Apromore D
 Windows - run `stop.bat`  
 Mac / Linux - run `stop.sh`   
 
-## Remove Apromore Docker
-Run this to remove the Apromore Docker container images and persistent volumes.  Any works you did on Apromore Docker will be gone.  
+## Uninstall Apromore Docker
+Run this to remove the Apromore Docker container images from your system.  Afterwards you can delete the ApromoreDocker-*version* folder.
 
 Windows - run `remove.bat`  
 Mac / Linux - run `remove.sh`  
