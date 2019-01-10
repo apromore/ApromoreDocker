@@ -3,6 +3,6 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.eclipse.org/virgo/schema/plan http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
 
-	<artifact type="bundle" name="com.raffaeleconforti.apromore-process-discoverer" version="[1.0.20180719,1.0.20180719]"/>
+	<artifact type="bundle" name="com.raffaeleconforti.process-discoverer" version="[1.0.20181204,1.0.20181204]"/>
 
 </plan>
