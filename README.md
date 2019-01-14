@@ -1,11 +1,11 @@
 # Overview
-This is a distribution of [Apromore](http://apromore.org/) that runs in Docker container and includes the following components:
-* Apromore Core:
+This is a distribution of [Apromore](http://apromore.org/) Core that runs in Docker container and includes the following components:
+* Apromore Core Components:
   * Manager 1.1
   * Portal 1.1
   * Fileshare 1.1
   * Editor 1.1
-* Apromore Plugins:
+* Apromore Core Plugins:
   * BIMP Simulator 1.0.0
   * Compare Tool 1.1.0
   * Log Animation 1.0.0
