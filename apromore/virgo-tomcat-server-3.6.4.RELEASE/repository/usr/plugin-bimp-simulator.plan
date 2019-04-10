@@ -4,6 +4,7 @@
         xsi:schemaLocation="http://www.eclipse.org/virgo/schema/plan http://www.eclipse.org/virgo/schema/plan/eclipse-virgo-plan.xsd">
 
     <artifact type="bundle" name="org.apromore.plugin.bimp-editor-plugin" version="[1.0.0,1.0.0]"/>
+    <artifact type="bundle" name="org.apromore.plugin.bimp-editor-plugin2" version="[1.0.0,1.0.0]"/>
     <artifact type="bundle" name="org.apromore.plugin.bimp-portal-plugin" version="[1.0.0,1.0.0]"/>
 
 </plan>

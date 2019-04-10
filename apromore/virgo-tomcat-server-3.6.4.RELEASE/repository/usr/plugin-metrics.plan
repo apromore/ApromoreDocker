@@ -6,5 +6,5 @@
     <artifact type="bundle" name="org.apromore.metrics-logic" version="[1.1.0,1.1.0]"/>
     <artifact type="bundle" name="org.apromore.plugin.metrics-portal-plugin" version="[1.1.0,1.1.0]"/>
 	<artifact type="bundle" name="org.apromore.plugin.metrics-editor-plugin" version="[1.1.0,1.1.0]"/>
-
+    <artifact type="bundle" name="org.apromore.plugin.metrics-editor-plugin2" version="[1.1.0,1.1.0]"/>
 </plan>

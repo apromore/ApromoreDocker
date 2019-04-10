@@ -9,6 +9,7 @@
     <artifact type="plan" name="org.apromore.portal" version="[1.1,1.1]" />
     <artifact type="plan" name="org.apromore.filestore" version="[1.1,1.1]"/>
     <artifact type="plan" name="org.apromore.editor" version="[1.1,1.1]"/>
+	<artifact type="plan" name="org.apromore.bpmn-editor" version="[1.1,1.1]"/>
 	
 	<!-- libraries -->
 	<artifact type="plan" name="org.apromore.plugin.canonisers" version="[1.1,1.1]"/>

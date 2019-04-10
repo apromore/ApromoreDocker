@@ -5,5 +5,6 @@
 
     <artifact type="bundle" name="org.apromore.compare-logic" version="[1.1.0,1.1.0]"/>
     <artifact type="bundle" name="org.apromore.plugin.compareBP-portal-plugin" version="[1.1.0,1.1.0]"/>
+    <artifact type="bundle" name="org.apromore.plugin.compareBP-portal-plugin2" version="[1.1.0,1.1.0]"/>
 
 </plan>

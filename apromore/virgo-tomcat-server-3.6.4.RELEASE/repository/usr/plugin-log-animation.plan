@@ -5,5 +5,6 @@
 
 	<artifact type="bundle" name="org.apromore.log-animation-logic" version="[1.0.0,1.0.0]"/>
     <artifact type="bundle" name="org.apromore.plugin.log-animation-portal-plugin" version="[1.0.0,1.0.0]"/>
+    <artifact type="bundle" name="org.apromore.plugin.log-animation-portal-plugin2" version="[1.0.0,1.0.0]"/>
 
 </plan>

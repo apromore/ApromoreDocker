@@ -26,4 +26,13 @@ case "$(uname)" in
 esac
 export cygwin
 
+# Start the X virtual frame buffer (Xvfb)
+# if [ -f /usr/X11R6/bin/Xvfb ]; then
+# /usr/X11R6/bin/Xvfb :1 -screen 0 1024x768x16 &
+# fi
+# echo "Starting X virtual framebuffer (Xvfb) in background..."
+# Xvfb :1 -screen 0 1024x768x16 &
+# Set the DISPLAY variable for the X virtual frame buffer (Xvfb)
+# export DISPLAY=localhost:1.0
+
 exec "$SCRIPT_DIR"/"$EXECUTABLE" start "$@"

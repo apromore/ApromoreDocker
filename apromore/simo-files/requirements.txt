@@ -1,0 +1,5 @@
+lxml==4.2.5
+matplotlib==2.2.3
+networkx==2.2
+numpy==1.15.4
+seaborn==0.9.0
