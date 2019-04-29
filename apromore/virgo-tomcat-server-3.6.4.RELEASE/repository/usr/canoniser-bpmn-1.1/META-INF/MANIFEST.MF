@@ -1,0 +1,50 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: tusharsoni
+Build-Jdk: 1.8.0_201
+Bnd-LastModified: 1556084046140
+Bundle-Description: Apromore Plugin API's and core Plugins
+Bundle-License: http://www.gnu.org/licenses/lgpl-3.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apromore BPMN Canoniser
+Bundle-SymbolicName: org.apromore.plugin.canoniser-bpmn
+Bundle-Version: 1.1.0
+Export-Package: org.apromore.canoniser.bpmn;uses:="javax.xml.bind,org.
+ apromore.anf,org.apromore.canoniser,org.apromore.canoniser.exception,
+ org.apromore.canoniser.result,org.apromore.cpf,org.apromore.plugin,or
+ g.springframework.stereotype,org.xml.sax";version="1.1.0",org.apromor
+ e.canoniser.bpmn.bpmn;uses:="com.sun.xml.bind,javax.xml.bind,javax.xm
+ l.bind.annotation,javax.xml.namespace,javax.xml.transform,org.apromor
+ e.anf,org.apromore.canoniser.bpmn,org.apromore.canoniser.bpmn.cpf,org
+ .apromore.canoniser.exception,org.apromore.cpf,org.omg.spec.bpmn._201
+ 00524.di,org.omg.spec.bpmn._20100524.model";version="1.1.0",org.aprom
+ ore.canoniser.bpmn.anf;uses:="javax.xml.bind,javax.xml.bind.annotatio
+ n,org.apromore.anf,org.apromore.canoniser.bpmn,org.apromore.canoniser
+ .bpmn.bpmn,org.omg.spec.bpmn._20100524.di,org.omg.spec.bpmn._20100524
+ .model,org.omg.spec.dd._20100524.dc";version="1.1.0",org.apromore.can
+ oniser.bpmn.cpf;uses:="com.sun.xml.bind,javax.xml.bind,javax.xml.bind
+ .annotation,javax.xml.namespace,org.apromore.canoniser.bpmn,org.aprom
+ ore.canoniser.bpmn.bpmn,org.apromore.canoniser.exception,org.apromore
+ .cpf,org.omg.spec.bpmn._20100524.model,org.xml.sax";version="1.1.0"
+Import-Package: com.processconfiguration;version="[1.1,2)",com.signavi
+ o;version="[1.1,2)",com.sun.xml.bind;version="[2.2,3)",javax.xml.bind
+ ;version="[2.2,3)",javax.xml.bind.annotation;version="[2.2,3)",javax.
+ xml.datatype,javax.xml.namespace,javax.xml.transform,javax.xml.transf
+ orm.dom,javax.xml.transform.stream,javax.xml.validation,org.apache.co
+ mmons.io.input;version="[1.4,2)",org.apromore.anf;version="[1.1,2)",o
+ rg.apromore.canoniser;version="[1.1,2)",org.apromore.canoniser.bpmn,o
+ rg.apromore.canoniser.bpmn.anf,org.apromore.canoniser.bpmn.bpmn,org.a
+ promore.canoniser.bpmn.cpf,org.apromore.canoniser.exception;version="
+ [1.1,2)",org.apromore.canoniser.result;version="[1.1,2)",org.apromore
+ .canoniser.utils;version="[1.1,2)",org.apromore.cpf;version="[1.1,2)"
+ ,org.apromore.plugin;version="[1.1,2)",org.apromore.plugin.message;ve
+ rsion="[1.1,2)",org.omg.spec.bpmn._20100524.di;version="[1.1,2)",org.
+ omg.spec.bpmn._20100524.model;version="[1.1,2)",org.omg.spec.dd._2010
+ 0524.dc;version="[1.1,2)",org.omg.spec.dd._20100524.di;version="[1.1,
+ 2)",org.slf4j;version="[1.7,2)",org.springframework.stereotype;versio
+ n="[3.1,4)",org.w3c.dom,org.w3c.dom.ls,org.xml.sax
+Import-Packages: com.sun*
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.0.0.201509101326
+

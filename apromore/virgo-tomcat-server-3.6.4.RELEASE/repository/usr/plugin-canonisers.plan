@@ -6,7 +6,7 @@
 
     <!-- Canoniser bundles -->
     <artifact type="bundle" name="org.apromore.plugin.canoniser-aris" version="[1.1.0, 2)"/>
-    <artifact type="bundle" name="org.apromore.plugin.canoniser-bpmn" version="[1.1.1, 2)"/>
+    <artifact type="bundle" name="org.apromore.plugin.canoniser-bpmn" version="[1.1.0, 2)"/>
     <artifact type="bundle" name="org.apromore.plugin.canoniser-epml" version="[1.1.0, 2)"/>
     <artifact type="bundle" name="org.apromore.plugin.canoniser-pnml" version="[1.1.0, 2)"/>
     <artifact type="bundle" name="org.apromore.plugin.canoniser-xpdl" version="[1.1.0, 2)"/>
