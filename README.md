@@ -1,10 +1,10 @@
 ![apromore](http://apromore.org/wp-content/uploads/2018/11/flow.jpg "apromore")
 
-# Apromore Docker v7.0.1
+# Apromore Docker v7.1.0
 
 # Overview
 
-This is a distribution of [Apromore Core v7.0.1](http://apromore.org/) that runs in Docker container and includes the following components and plugins:
+This is a distribution of [Apromore Core v7.1.0](http://apromore.org/) that runs in Docker container and includes the following components and plugins:
 
 * Apromore Core Components:
   * Manager 1.1
@@ -60,7 +60,7 @@ Memory: By default, Docker Desktop is set to use 2 GB runtime memory, allocated 
 Swap: Set to 2048MB.
 
 ## Download Apromore Docker
-Download the lastest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
+Download the latest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
 Unzip the downloaded file and open the ApromoreDocker-*version* folder.  
 
 ## Start Apromore Docker
@@ -126,6 +126,6 @@ If you encountered a problem running this container, you can file an [issue](htt
 
 This section describes issues that users of Apromore Docker may encounter, as well as possible workarounds for these issues.
 
-### Detect Process Drift function doesn't work on Apromore Docker
-
-Due to a known issue that causes `Analize > Detect Process Drift` function doesn't work properly on Linux environment and throw HeadlessException error message.
+### SiMo
+* Export BPMN annotated for BIMP doesn’t work as expected, we are working to fix this issue and will most likely include it in the next release.
+To witness, Please follow the instructions: Select a Log > Discover process map/BPMN model > Export > Export BPMN annotated for BIMP
