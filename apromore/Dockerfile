@@ -15,6 +15,7 @@ RUN apt-get -y update \
 && apt-get -y install python3 \
 && apt-get -y install python3-pip \
 && apt-get -y install xvfb \
+&& apt-get -y install python3-tk \
 # && apt-get -y install xserver-xorg-core \
 # && apt-get -y install sudo \
 # && apt-get -y install telnet \
@@ -54,17 +55,20 @@ ENV PYTHONPATH=/opt/nirdizati-training-backend/
 # ENV DISPLAY=localhost:0.0
 
 # PROCESS DISCOVERY ADVANCED SETUP
-# WORKDIR /opt/
-# RUN git clone https://github.com/AdaptiveBProcess/SiMo-Discoverer.git \
-# && cp /opt/apromore/simo-files/requirements.txt /opt/SiMo-Discoverer \
-# && cp /opt/apromore/simo-files/apromore-simo.py /opt/SiMo-Discoverer/simo
-# WORKDIR /opt/SiMo-Discoverer/
-# RUN pip3 install -r requirements.txt
+WORKDIR /opt/
+RUN git clone https://github.com/AdaptiveBProcess/SiMo-Discoverer.git \
+&& cd SiMo-Discoverer \
+&& git checkout 0527d1f25ae5079520deca6a61bcaf022ed8ecfd \
+&& cp /opt/apromore/simo-files/requirements.txt /opt/SiMo-Discoverer \
+&& mkdir /opt/SiMo-Discoverer/simo/ \
+&& cp /opt/apromore/simo-files/apromore-simo.py /opt/SiMo-Discoverer/simo/
+WORKDIR /opt/SiMo-Discoverer/
+RUN pip3 install -r requirements.txt
 
-# RUN chown -R apromore:apromore /opt/SiMo-Discoverer \
-# && chmod -R 777 /opt/SiMo-Discoverer
+RUN chown -R apromore:apromore /opt/SiMo-Discoverer \
+&& chmod -R 777 /opt/SiMo-Discoverer/
 
-# ENV PYTHONPATH=/opt/SiMo-Discoverer/
+ENV PYTHONPATH=/opt/SiMo-Discoverer/
 
 # setup LPSolve library
 RUN cp /opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/liblpsolve55/* /usr/local/lib \
