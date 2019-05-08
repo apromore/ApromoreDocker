@@ -112,6 +112,14 @@ Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/apromor
 
 # Issues
 
+## Known issues
+
+This section describes issues that users of Apromore Docker may encounter, as well as possible workarounds:
+
+### SiMo
+* Export BPMN annotated for BIMP doesn’t work as expected, we are working to fix this issue and will most likely include it in the next release.
+To witness, Please follow the instructions: Select a Log > Discover process map/BPMN model > Export > Export BPMN annotated for BIMP
+
 ## How to report a issue
 
 If you encountered a problem running this container, you can file an [issue](https://github.com/apromore/ApromoreDocker/issues). For us to provide better support, be sure to include the following information in your issue:
@@ -121,11 +129,3 @@ If you encountered a problem running this container, you can file an [issue](htt
 * Output of docker info
 * Version of Apromore Docker
 * The step and command you used to run Apromore Docker, and any relevant output you saw (masking any sensitive information)
-
-## Known issues
-
-This section describes issues that users of Apromore Docker may encounter, as well as possible workarounds for these issues.
-
-### SiMo
-* Export BPMN annotated for BIMP doesn’t work as expected, we are working to fix this issue and will most likely include it in the next release.
-To witness, Please follow the instructions: Select a Log > Discover process map/BPMN model > Export > Export BPMN annotated for BIMP
