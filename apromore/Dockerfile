@@ -10,7 +10,7 @@ RUN apt-get -y update \
 # && apt-get -y install openjdk-8-jre-headless \
 # && apt-get -y install default-jdk \
 # && apt-get install -y openjdk-8-jre \
-&& sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibility.properties \
+# && sed -i -e '/^assistive_technologies=/s/^/#/' /etc/java-8-openjdk/accessibility.properties \
 && apt-get -y install git \
 && apt-get -y install python3 \
 && apt-get -y install python3-pip \
