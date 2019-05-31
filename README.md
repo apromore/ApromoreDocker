@@ -1,6 +1,6 @@
 ![apromore](http://apromore.org/wp-content/uploads/2018/11/flow.jpg "apromore")
 
-# Apromore Docker v7.1.0
+# Apromore Docker v7.2.0
 
 # Overview
 
