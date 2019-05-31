@@ -4,7 +4,7 @@
 
 # Overview
 
-This is a distribution of [Apromore Core v7.1.0](http://apromore.org/) that runs in Docker container and includes the following components and plugins:
+This is a distribution of Apromore Core v7.2.0 that runs in Docker container and includes the following components and plugins:
 
 * Apromore Core Components:
   * Manager 1.1
