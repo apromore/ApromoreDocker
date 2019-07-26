@@ -19,6 +19,7 @@
 	<artifact type="plan" name="org.apromore.plugin.bimp-simulator" version="[1.0.0,1.0.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.compare" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.log-animation" version="[1.0.0,1.0.0]"/>
+	<!-- <artifact type="plan" name="org.apromore.plugin.log-visualizer" version="[1.1.0,1.1.0]"/> -->
 	<artifact type="plan" name="org.apromore.plugin.prodrift" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.process-discoverer" version="[1.0.0,1.0.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.stagemining" version="[1.1.0,1.1.0]"/>
@@ -29,19 +30,5 @@
 	<artifact type="plan" name="org.apromore.plugin.similaritysearch" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.merge" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.metrics" version="[1.1.0,1.1.0]"/>
-
-	<artifact type="plan" name="org.apromore.iBPStruct" version="[1.0,1.1.0]"/>	
-	<!-- <artifact type="plan" name="org.apromore.plugin.Pre-Processor" version="[1.0,1.1.0]"/> -->
-	<artifact type="plan" name="org.apromore.apm" version="[1.0,1.1.0]"/>
-
-	<artifact type="plan" name="org.apromore.activity-filter" version="[1.0,1.1.0]"/>
-	<artifact type="plan" name="org.apromore.BPMN-miner" version="[1.0,1.1.0]"/>	
-	<artifact type="plan" name="org.apromore.gbebop" version="[1.0,1.1.0]"/>	
-	<artifact type="plan" name="org.apromore.gbprove" version="[1.0,1.1.0]"/>	
-
-
-	<artifact type="plan" name="org.apromore.cmapper" version="[1.0,1.1.0]"/>	
-	<artifact type="plan" name="org.apromore.infrequent-behaviour-filter" version="[1.0,1.1.0]"/>	
-	<artifact type="plan" name="org.apromore.ltl-conf" version="[1.0,1.1.0]"/>	
-
+	
 </plan>
