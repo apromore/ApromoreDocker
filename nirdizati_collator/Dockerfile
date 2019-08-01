@@ -12,7 +12,7 @@ WORKDIR /opt/
 RUN git clone https://github.com/nirdizati/nirdizati-training-backend.git
 
 WORKDIR /opt/nirdizati-training-backend/
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY retry.sh /opt/nirdizati-training-backend/apromore/
 
