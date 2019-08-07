@@ -8,6 +8,7 @@ services:
             - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
             - "./apromore/Filestore-Repository:/opt/apromore/Filestore-Repository"
             - "./apromore/Lucene-Repository:/opt/apromore/Lucene-Repository"
+            - "./apromore/site.properties:/opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties"
         depends_on:
             - mysql
             - kafka
