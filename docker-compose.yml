@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
     apromore:
-        image: apromore/apromore:7.4
+        image: apromore/apromore:7.5
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
             - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
