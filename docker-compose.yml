@@ -3,7 +3,7 @@ services:
 
     apromore:
         build: ./apromore
-        image: apromore
+        image: apromore/apromore:7.5
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
             - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
@@ -53,14 +53,12 @@ services:
             - "/var/run/docker.sock:/var/run/docker.sock"
 
     nirdizati_collator:
-        build: ./nirdizati_collator
-        image: nirdizati_collator
+        image: apromore/nirdizati_collator
         depends_on:
             - kafka
 
     nirdizati_predict:
-        build: ./nirdizati_predict
-        image: nirdizati_predict
+        image: apromore/nirdizati_predict
         depends_on:
             - kafka
 
