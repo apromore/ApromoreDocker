@@ -3,7 +3,7 @@ services:
 
     apromore:
         build: ./apromore
-        image: apromore/apromore:7.5
+        image: apromore/apromore:7.6
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
             - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
