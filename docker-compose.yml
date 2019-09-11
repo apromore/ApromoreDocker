@@ -52,4 +52,14 @@ services:
         volumes:
             - "/var/run/docker.sock:/var/run/docker.sock"
 
+    nirdizati_collator:
+        image: apromore/nirdizati_collator
+        depends_on:
+            - kafka
+
+    nirdizati_predict:
+        image: apromore/nirdizati_predict
+        depends_on:
+            - kafka
+
             
