@@ -191,8 +191,7 @@ then
         JAVA_OPTS="$JAVA_OPTS \
                     -server \
                     -Xmx4g \
-                    -Xmn1g \
-					-Djava.awt.headless=true"
+                    -Xmn1g"
 
 		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
 			$JAVA_OPTS \

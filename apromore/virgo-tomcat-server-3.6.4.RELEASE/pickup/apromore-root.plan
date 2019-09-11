@@ -9,27 +9,26 @@
     <artifact type="plan" name="org.apromore.portal" version="[1.1,1.1]" />
     <artifact type="plan" name="org.apromore.filestore" version="[1.1,1.1]"/>
     <artifact type="plan" name="org.apromore.editor" version="[1.1,1.2]"/>
-    <artifact type="plan" name="org.apromore.bpmn-editor" version="[1.1,1.1]"/>
     <artifact type="plan" name="org.apromore.csvimporter" version="[1.0,1.0]"/>
 	
 	<!-- libraries -->
 	<artifact type="plan" name="org.apromore.plugin.canonisers" version="[1.1,1.1]"/>
 	
 	<!-- core plugins -->
-	<artifact type="plan" name="org.apromore.plugin.bimp-simulator" version="[1.0.0,1.0.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.compare" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.log-animation" version="[1.0.0,1.0.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.prodrift" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.process-discoverer" version="[1.0.0,1.0.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.stagemining" version="[1.1.0,1.1.0]"/>
-	<artifact type="plan" name="org.apromore.plugin.predictive-monitor" version="[1.0.0,1.0.0]"/>
-	<artifact type="plan" name="org.apromore.plugin.predictor-training" version="[1.0.0,1.0.0]"/>
 	
 	<artifact type="plan" name="org.apromore.plugin.perfmining" version="[1.0.0,1.0.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.similaritysearch" version="[1.1.0,1.1.0]"/>
 	<artifact type="plan" name="org.apromore.plugin.merge" version="[1.1.0,1.1.0]"/>
-	<artifact type="plan" name="org.apromore.plugin.metrics" version="[1.1.0,1.1.0]"/>
 
 	<artifact type="plan" name="org.apromore.log-filter-logic" version="[1.0,1.0]"/>
+
+	<artifact type="plan" name="org.apromore.annotations" version="[1.0,1.0]"/>	
+	<artifact type="plan" name="org.apromore.account" version="[1.0,1.0]"/>
+	<artifact type="plan" name="org.apromore.bpmneditor" version="[1.0,1.0]"/>	
 
 </plan>
