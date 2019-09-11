@@ -2,7 +2,6 @@ version: "3.7"
 services:
 
     apromore:
-        build: ./apromore
         image: apromore/apromore:7.6
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
