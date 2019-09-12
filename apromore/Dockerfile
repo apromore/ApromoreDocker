@@ -7,6 +7,7 @@ FROM openjdk:8
 RUN groupadd -r apromore && useradd --no-log-init -r -g apromore apromore
 
 RUN apt-get -y update \
+&& apt-get -y install vim \
 # && apt-get -y install openjdk-8-jre-headless \
 # && apt-get -y install default-jdk \
 # && apt-get install -y openjdk-8-jre \
@@ -20,7 +21,7 @@ RUN apt-get -y update \
 # && apt-get -y install sudo \
 # && apt-get -y install telnet \
 # && apt-get -y install iputils-ping \
-&& apt-get -y clean
+&& apt-get -y clean 
 
 WORKDIR /opt/
 
