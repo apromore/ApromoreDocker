@@ -190,7 +190,7 @@ then
 
         JAVA_OPTS="$JAVA_OPTS \
                     -server \
-                    -Xmx4g \
+                    -Xmx8g \
                     -Xmn1g"
 
 		cd $KERNEL_HOME; exec $JAVA_EXECUTABLE \
