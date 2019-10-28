@@ -38,7 +38,7 @@ You can download Windows version [here](https://docs.docker.com/docker-for-windo
 Docker Desktop - Mac works on OS X Sierra 10.12 and newer macOS releases. You can download Mac OS version [here](https://docs.docker.com/docker-for-mac/install/).
 
 ####  - Ubuntu Users
-For Ubuntu bionic users, run docker_install to install Docker and Docker-compose.
+For Ubuntu 18 users, run docker_install to install Docker and Docker-compose.
 
 For other Ubuntu versions, please follow [this link](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
