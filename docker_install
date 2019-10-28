@@ -48,5 +48,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo docker run hello-world
 # Hello from Docker!
 
-docker-compose --version
+sudo docker-compose --version
 
