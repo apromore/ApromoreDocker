@@ -10,7 +10,6 @@ services:
             - "./apromore/Lucene-Repository:/opt/apromore/Lucene-Repository"
         depends_on:
             - mysql
-            - kafka
         ports:
             - "9000:9000"
 
