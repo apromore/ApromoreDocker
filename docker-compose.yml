@@ -3,6 +3,7 @@ services:
 
     apromore:
         image: apromore/apromore:7.6
+        container_name: apromore-docker
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
             - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
@@ -15,6 +16,7 @@ services:
 
     mysql:
         image: mysql:5.6.45
+        container_name: mysql
         # override the mysql config and set max_allowed_packet to 2G
         # or else dump sql could not restore DB successfully
         command: --max_allowed_packet=2G
