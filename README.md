@@ -1,4 +1,4 @@
-![apromore](http://apromore.org/wp-content/uploads/2018/11/flow.jpg "apromore")
+![apromore](http://apromore.org/wp-content/uploads/2019/11/Apromore-banner_narrow.png "apromore")
 
 # Apromore Docker
 
