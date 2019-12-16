@@ -1,31 +1,26 @@
-![apromore](http://apromore.org/wp-content/uploads/2018/11/flow.jpg "apromore")
+![apromore](http://apromore.org/wp-content/uploads/2019/11/Apromore-banner_narrow.png "apromore")
 
-# Apromore Docker v7.2.0
+# Apromore Docker
 
 # Overview
 
-This is a distribution of Apromore Core v7.2.0 that runs in Docker container and includes the following components and plugins:
+This is a distribution of Apromore Core that runs in Docker container and includes the following components and plugins:
 
 * Apromore Core Components:
-  * Manager 1.1
-  * Portal 1.1
-  * Fileshare 1.1
-  * Editor 1.1
-  * BPMNEditor 1.1
+  * Manager
+  * Portal
+  * Fileshare
+  * Editor (Signavio-based)
+  * BPMNEditor (bpmn.io-based)
 * Apromore Core Plugins:
-  * BIMP Simulator 1.0.0
-  * Compare Tool 1.1.0
-  * Log Animation 1.0.0
-  * Log Visualizer 1.1.0
-  * Predictive Monitor 1.0.0
-  * Predictive Training 1.0.0
-  * ProDrift 1.1.0
-  * Process Discoverer 1.0.0
-  * Stage Mining 1.1.0
-  * Performance Mining 1.0.0
-  * Similarity Search 1.1.0
-  * Merge 1.1.0
-  * Metrics 1.1.0
+  * Process Discoverer
+  * Compare Tool
+  * Log Animation
+  * ProDrift
+  * Stage based mining and performance
+  * Similarity Search
+  * Merge models
+
 
 # Run Apromore Docker
 
@@ -35,15 +30,17 @@ This is a distribution of Apromore Core v7.2.0 that runs in Docker container and
 
 First, please install **Docker Desktop** on your machine based on the OS you are using.
 
-####  - Windows User
+####  - Windows Users
 Docker Desktop for Windows is Docker designed to run on Windows 10.
-You can download Windows version [here](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe).
+You can download Windows version [here](https://docs.docker.com/docker-for-windows/install/).
 
-####  - Mac User
-Docker Desktop - Mac works on OS X Sierra 10.12 and newer macOS releases. You can download Mac OS version [here](https://download.docker.com/mac/stable/Docker.dmg).
+####  - Mac Users
+Docker Desktop - Mac works on OS X Sierra 10.12 and newer macOS releases. You can download Mac OS version [here](https://docs.docker.com/docker-for-mac/install/).
 
-####  - Linux User
-For Linux versions, please follow [this link](https://download.docker.com/linux/).
+####  - Ubuntu Users
+For Ubuntu 18 users, run docker_install to install Docker and Docker-compose.
+
+For other Ubuntu versions, please follow [this link](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
 >*Please make sure [docker-compose command line tool](https://docs.docker.com/compose/install/) has also been installed. Some Docker distributions may require you to install this separately.*
 
@@ -97,7 +94,7 @@ Run following script to remove the Apromore Docker container images from your sy
 
 ## Where to find data
 
-Apromore Docker create a data directory on the host system (outside the docker container) and mount this to a directory visible from inside the container. This places the database files and event log files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files.  
+Apromore Docker creates a data directory on the host system (outside the docker container) and mounts this to a directory visible from inside the container. This places the database files and event log files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files.  
 
 >MySQL database: `/wherever/you/keep/ApromoreDocker/apromore/mysql-data`  
 >Event Log files: `/wherever/you/keep/ApromoreDocker/apromore/Event-logs_repository`
@@ -111,14 +108,6 @@ We suggest user to backup MySQL database data folder (`/wherever/you/keep/Apromo
 Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/apromore/mysql-data`) with backup after Apromore Docker installation if you want to restore data.
 
 # Issues
-
-## Known issues
-
-This section describes issues that users of Apromore Docker may encounter, as well as possible workarounds:
-
-### SiMo
-* Export BPMN annotated for BIMP doesn’t work as expected, we are working to fix this issue and will most likely include it in the next release.
-To witness, Please follow the instructions: Select a Log > Discover process map/BPMN model > Export > Export BPMN annotated for BIMP
 
 ## How to report an issue
 
