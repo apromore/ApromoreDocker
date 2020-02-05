@@ -12,23 +12,33 @@ This is a distribution of Apromore Core that runs in Docker container and includ
   * Fileshare
   * Editor (Signavio-based)
   * BPMNEditor (bpmn.io-based)
+  * CSV Importer
 * Apromore Core Plugins:
-  * Process Discoverer
   * Compare Tool
   * Log Animation
   * ProDrift
+  * Process Discoverer
   * Stage based mining and performance
   * Similarity Search
   * Merge models
-
+  * Log filter
+  * Annotations
 
 # Run Apromore Docker
 
-## Preparation
+## Download Apromore Docker
+Download the latest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
+Unzip the downloaded file and open the ApromoreDocker-*version* folder. 
+
 
 ### Install Docker Desktop
 
-First, please install **Docker Desktop** on your machine based on the OS you are using.
+First, please install **Docker Desktop** on your machine based on the OS you are using:
+
+####  - Ubuntu Users
+For Ubuntu 18 users, run `docker_install` to install Docker and Docker-compose.
+
+For other Ubuntu versions, please follow [this link](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
 ####  - Windows Users
 Docker Desktop for Windows is Docker designed to run on Windows 10.
@@ -37,37 +47,22 @@ You can download Windows version [here](https://docs.docker.com/docker-for-windo
 ####  - Mac Users
 Docker Desktop - Mac works on OS X Sierra 10.12 and newer macOS releases. You can download Mac OS version [here](https://docs.docker.com/docker-for-mac/install/).
 
-####  - Ubuntu Users
-For Ubuntu 18 users, run docker_install to install Docker and Docker-compose.
-
-For other Ubuntu versions, please follow [this link](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
 >*Please make sure [docker-compose command line tool](https://docs.docker.com/compose/install/) has also been installed. Some Docker distributions may require you to install this separately.*
 
 Start Docker Desktop after installation.
 
-### Configure Docker Desktop
-Right-click the Docker icon in the task bar, select Settings/Preferences > Advanced.  
-Set CPUs: 4, memory: 4096MB memory, swap: 2048MB
 
-CPUs: By default, Docker Desktop is set to use half the number of processors available on the host machine. In order increase processing power, set this to 4.
-
-Memory: By default, Docker Desktop is set to use 2 GB runtime memory, allocated from the total available memory on your Machine. In order increase RAM, set this to 4096MB.
-
-Swap: Set to 2048MB.
-
-## Download Apromore Docker
-Download the latest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
-Unzip the downloaded file and open the ApromoreDocker-*version* folder.  
-
+ 
 ## Start Apromore Docker
 Run following script to start the Apromore Docker containers, it may take up to 10 minutes the first time your run this.  
 
+>Linux / Mac  - run `start`
 >Windows - run `start.bat`  
->Mac / Linux - run `start`  
+  
 
 Once Apromore Docker started the logs will print the following messages:  
->`<DE0005I> Started plan 'org.apromore.root' version '1.1.0'`  
+>`<DE0005I> Started plan 'org.apromore.root-nix' version '1.1.0'`  
 
 The logs will indicate that your application is running.  
 
@@ -78,8 +73,19 @@ Use credentials `testuser/testuser` to login.
 
 Run following script to stop the Apromore Docker containers.  Your saved works on Apromore Docker will still be there next time you start it.  
 
+>Linux / Mac - run `stop`
 >Windows - run `stop.bat`  
->Mac / Linux - run `stop`  
+
+
+## Change Port number:
+### If you desire to change the default port number from 9000, follow these steps:
+1. Stop Apromore.
+2. Change port number in docker-compose.yml from 9000:9000 to NewPortNumber:9000
+3. Start Apromore.
+4. Open new terminal window and execute:  docker exec -it apromore /bin/bash
+5. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties line #45 from site.externalport = 9000 to your desired port number using vim
+6. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/configuration/tomcat-server.xml line #30 to your desired port number using vim
+
 
 ## Uninstall Apromore Docker
 
@@ -87,8 +93,9 @@ Run following script to remove the Apromore Docker container images from your sy
 
 ***Please backup your work before uninstall Apromore Docker. See [instruction](# Caveats) below on how to backup and restore user data.***
 
+>Linux / Mac - run `remove` 
 >Windows - run `remove.bat`  
->Mac / Linux - run `remove`  
+ 
 
 # Caveats
 
@@ -99,7 +106,6 @@ Apromore Docker creates a data directory on the host system (outside the docker 
 >MySQL database: `/wherever/you/keep/ApromoreDocker/apromore/mysql-data`  
 >Event Log files: `/wherever/you/keep/ApromoreDocker/apromore/Event-logs_repository`
 
-The downside is that the user needs to make sure that the directory exists, and that e.g. directory permissions and other security mechanisms on the host system are set up correctly.
 
 ## How to backup and restore data
 

@@ -2,23 +2,21 @@ version: "3.7"
 services:
 
     apromore:
-        image: apromore/apromore:7.6
-        container_name: apromore-docker
+        image: apromore/apromore:7.11
+        container_name: apromore
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
             - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
             - "./apromore/Filestore-Repository:/opt/apromore/Filestore-Repository"
             - "./apromore/Lucene-Repository:/opt/apromore/Lucene-Repository"
         depends_on:
-            - mysql
+            - apromoresql
         ports:
             - "9000:9000"
 
-    mysql:
-        image: mysql:5.6.45
-        container_name: mysql
-        # override the mysql config and set max_allowed_packet to 2G
-        # or else dump sql could not restore DB successfully
+    apromoresql:
+        image: mysql:5.7
+        container_name: apromoresql
         command: --max_allowed_packet=2G
         environment:
             MYSQL_ROOT_PASSWORD: MAcri
@@ -28,4 +26,4 @@ services:
         volumes:
             - "./apromore/mysql-data:/var/lib/mysql"
         expose:
-            - "3306"
+            - "3306"          

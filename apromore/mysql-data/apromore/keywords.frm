@@ -7,7 +7,7 @@ definer_user=root
 definer_host=localhost
 suid=1
 with_check_option=0
-timestamp=2019-09-17 14:03:45
+timestamp=2019-11-11 23:24:12
 create-version=1
 source=select `process`.`id` AS `processId`,`process`.`id` AS `value` from `process` union select `process`.`id` AS `processId`,`process`.`name` AS `word` from `process` union select `process`.`id` AS `processId`,`process`.`domain` AS `domain` from `process` union select `process`.`id` AS `processId`,`native_type`.`nat_type` AS `original_type` from (`process` join `native_type` on((`process`.`nativeTypeId` = `native_type`.`id`))) union select `process`.`id` AS `processId`,`user`.`first_name` AS `firstname` from (`process` join `user` on((`process`.`owner` = `user`.`username`))) union select `process`.`id` AS `processId`,`user`.`last_name` AS `lastname` from (`process` join `user` on((`process`.`owner` = `user`.`username`))) union select `process_branch`.`processId` AS `processId`,`process_branch`.`branch_name` AS `branch_name` from `process_branch`
 client_cs_name=utf8
