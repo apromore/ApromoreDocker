@@ -1,6 +1,6 @@
 ![apromore](http://apromore.org/wp-content/uploads/2019/11/Apromore-banner_narrow.png "apromore")
 
-# Apromore Docker
+# Apromore Docker Community Edition
 
 # Overview
 
