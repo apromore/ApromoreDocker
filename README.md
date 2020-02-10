@@ -10,7 +10,7 @@ This is a distribution of Apromore Core that runs in Docker container and includ
   * Manager
   * Portal
   * Fileshare
-  * Editor (Signavio-based)
+  * Editor (legacy)
   * BPMNEditor (bpmn.io-based)
   * CSV Importer
 * Apromore Core Plugins:
