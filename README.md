@@ -26,10 +26,8 @@ This is a distribution of Apromore Core that runs in Docker container and includ
 
 # Run Apromore Docker
 
-## Download Apromore Docker
-Download the latest [Apromore Docker release](https://github.com/apromore/ApromoreDocker/releases/latest).  
-Unzip the downloaded file and open the ApromoreDocker-*version* folder. 
-
+### Download Apromore Docker
+Download and unzip Apromore Docker or check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
 
 ### Install Docker Desktop
 
