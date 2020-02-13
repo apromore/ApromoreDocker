@@ -19,6 +19,6 @@ services:
             MYSQL_USER: apromore
             MYSQL_PASSWORD: MAcri
         volumes:
-            - "./apromore/mysql-data:/var/lib/mysql"
+            - "./mysql-data:/var/lib/mysql"
         expose:
             - "3306"          
