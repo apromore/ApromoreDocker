@@ -4,11 +4,6 @@ services:
     apromore:
         image: apromore/apromore:7.12
         container_name: apromore
-        volumes:
-            - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
-            - "./apromore/Event-Logs-Repository:/opt/apromore/Event-Logs-Repository"
-            - "./apromore/Filestore-Repository:/opt/apromore/Filestore-Repository"
-            - "./apromore/Lucene-Repository:/opt/apromore/Lucene-Repository"
         depends_on:
             - apromoresql
         ports:
