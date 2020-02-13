@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
     apromore:
-        image: apromore/apromore:7.11
+        image: apromore/apromore:7.12
         container_name: apromore
         volumes:
             - "./apromore/Editor-Repository:/opt/apromore/Editor-Repository"
