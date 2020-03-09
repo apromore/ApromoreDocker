@@ -1,9 +1,5 @@
 cd "$(dirname "$0")"
 
 chmod -R 777 apromore
-mkdir -p apromore/Editor-Repository
-mkdir -p apromore/Event-Logs-Repository
-mkdir -p apromore/Filestore-Repository
-mkdir -p apromore/Lucene-Repository
 
 docker-compose up

@@ -99,23 +99,22 @@ Run following script to remove the Apromore Docker container images from your sy
 
 ## Where to find data
 
-Apromore Docker creates a data directory on the host system (outside the docker container) and mounts this to a directory visible from inside the container. This places the database files and event log files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files.  
+Apromore Docker creates a data directory on the host system (outside the docker container) and mounts this to a directory visible from inside the container. This places the database files in a known location on the host system, and makes it easy for tools and applications on the host system to access the files.  
 
->MySQL database: `/wherever/you/keep/ApromoreDocker/apromore/mysql-data`  
->Event Log files: `/wherever/you/keep/ApromoreDocker/apromore/Event-logs_repository`
+>MySQL database: `/wherever/you/keep/ApromoreDocker/mysql-data` 
 
 
 ## How to backup and restore data
 
-We suggest user to backup MySQL database data folder (`/wherever/you/keep/ApromoreDocker/apromore/mysql-data`) and event log files folder (`/wherever/you/keep/ApromoreDocker/apromore/Event-logs_repository`) before uninstall Apromore Docker.
+We suggest user to backup MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) before uninstall Apromore Docker.
 
-Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/apromore/mysql-data`) with backup after Apromore Docker installation if you want to restore data.
+Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) with backup after Apromore Docker installation if you want to restore data.
 
 # Issues
 
 ## How to report an issue
 
-If you encountered a problem running this container, you can file an [issue](https://github.com/apromore/ApromoreDocker/issues). For us to provide better support, be sure to include the following information in your issue:
+If you encountered a problem running this container, you can file an [issue](https://github.com/apromore/ApromoreDocker/issues). Or visit our [forum](https://forum.apromore.org/). For us to provide better support, be sure to include the following information in your issue:
 
 * Host OS and version
 * Docker version (docker version)
