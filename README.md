@@ -53,7 +53,7 @@ Start Docker Desktop after installation.
 
  
 ## Start Apromore Docker
-Run following script to start the Apromore Docker containers, it may take up to 10 minutes the first time your run this.  
+Run following script to start the Apromore Docker containers, it may take few minutes the first time your run this.  
 
 >Linux / Mac  - run `start`
 >Windows - run `start.bat`  
@@ -64,7 +64,7 @@ Once Apromore Docker started the logs will print the following messages:
 
 The logs will indicate that your application is running.  
 
-Open Apromore Web UI: [http://localhost:9000](http://localhost:9000).  
+Open Apromore Web UI: [http://localhost:80](http://localhost:80).  
 Use credentials `testuser/testuser` to login.
 
 ## Stop Apromore Docker
@@ -76,12 +76,12 @@ Run following script to stop the Apromore Docker containers.  Your saved works o
 
 
 ## Change Port number:
-### If you desire to change the default port number from 9000, follow these steps:
+### If you desire to change the default port number from 80, follow these steps:
 1. Stop Apromore.
-2. Change port number in docker-compose.yml from 9000:9000 to NewPortNumber:9000
+2. Change port number in docker-compose.yml from 80:9000 to NewPortNumber:9000
 3. Start Apromore.
-4. Open new terminal window and execute:  docker exec -it apromore /bin/bash
-5. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties line #45 from site.externalport = 9000 to your desired port number using vim
+4. Open new terminal window and execute:  `docker exec -it apromore /bin/bash`
+5. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties line #45 from site.externalport = 80 to your desired port number using vim
 6. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/configuration/tomcat-server.xml line #30 to your desired port number using vim
 
 
