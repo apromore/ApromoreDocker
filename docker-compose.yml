@@ -7,7 +7,7 @@ services:
         depends_on:
             - apromoresql
         ports:
-            - "9000:9000"
+            - "80:9000"
 
     apromoresql:
         image: mysql:5.7

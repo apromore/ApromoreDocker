@@ -1,5 +1,6 @@
 cd "$(dirname "$0")"
 
+mkdir -p apromore/Editor-Repository
 chmod -R 777 apromore
 
 docker-compose up
