@@ -11,17 +11,17 @@ This is a distribution of Apromore Core that runs in Docker container and includ
   * Portal
   * Fileshare
   * Editor (legacy)
-  * BPMNEditor (bpmn.io-based)
+  * Editor (bpmn.io-based)
   * CSV Importer
-* Apromore Core Plugins:
+* Plugins:
   * Compare Tool
   * Log Animation
   * ProDrift
   * Process Discoverer
-  * Stage based mining and performance
+  * Stage-based mining and performance
   * Similarity Search
-  * Merge models
-  * Log filter
+  * Model Merging
+  * Log Filter
   * Annotations
 
 # Run Apromore Docker
