@@ -18,15 +18,13 @@
 
 version: "3.7"
 services:
-
     apromore:
-        image: apromore/apromore:7.12
+        image: apromore/community:7.15
         container_name: apromore
         depends_on:
             - apromoresql
         ports:
             - "80:9000"
-
     apromoresql:
         image: mysql:5.7
         container_name: apromoresql
