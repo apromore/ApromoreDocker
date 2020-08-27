@@ -10,33 +10,30 @@ This is a distribution of Apromore Core that runs in Docker container and includ
   * Manager
   * Portal
   * Fileshare
-  * Editor (legacy)
-  * Editor (bpmn.io-based)
+  * Editor
   * CSV Importer
 * Plugins:
   * Compare Tool
   * Log Animation
-  * ProDrift
   * Process Discoverer
   * Stage-based mining and performance
   * Similarity Search
   * Model Merging
   * Log Filter
-  * Annotations
 
 # Run Apromore Docker
 
 ### Download Apromore Docker
 Download and unzip Apromore Docker or check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
 
-### Install Docker Desktop
+### Install Docker
 
-First, please install **Docker Desktop** on your machine based on the OS you are using:
+First, please install **Docker** on your machine based on the OS you are using:
 
 ####  - Ubuntu Users
-For Ubuntu 18 users, run `docker_install` to install Docker and Docker-compose.
-
-For other Ubuntu versions, please follow [this link](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
+For Ubuntu, install
+* [Docker Engine](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
 ####  - Windows Users
 Docker Desktop for Windows is Docker designed to run on Windows 10.
@@ -45,22 +42,16 @@ You can download Windows version [here](https://docs.docker.com/docker-for-windo
 ####  - Mac Users
 Docker Desktop - Mac works on OS X Sierra 10.12 and newer macOS releases. You can download Mac OS version [here](https://docs.docker.com/docker-for-mac/install/).
 
-
->*Please make sure [docker-compose command line tool](https://docs.docker.com/compose/install/) has also been installed. Some Docker distributions may require you to install this separately.*
-
-Start Docker Desktop after installation.
-
-
  
 ## Start Apromore Docker
 Run following script to start the Apromore Docker containers, it may take few minutes the first time your run this.  
 
->Linux / Mac  - run `start`
->Windows - run `start.bat`  
+* For Linux / Mac, execute `sudo ./start` command.
+* For Windows, execute `start.bat` command in the command prompt or double click the `start.bat` file. **Note:** Make sure the directory is added in the Docker Desktop app so that it can mounted into Docker containers. This can be done by navigating to `Settings>Resources>File Sharing`. 
   
 
 Once Apromore Docker started the logs will print the following messages:  
->`<DE0005I> Started plan 'org.apromore.root-nix' version '1.1.0'`  
+>`Started plan 'org.apromore.community' version '1.1.0'`  
 
 The logs will indicate that your application is running.  
 
@@ -71,8 +62,8 @@ Use credentials `testuser/testuser` to login.
 
 Run following script to stop the Apromore Docker containers.  Your saved works on Apromore Docker will still be there next time you start it.  
 
->Linux / Mac - run `stop`
->Windows - run `stop.bat`  
+* For Linux / Mac, execute `sudo ./stop` command.
+* For Windows - run `stop.bat`  
 
 
 ## Change Port number:
@@ -80,7 +71,7 @@ Run following script to stop the Apromore Docker containers.  Your saved works o
 1. Stop Apromore.
 2. Change port number in docker-compose.yml from 80:9000 to NewPortNumber:9000
 3. Start Apromore.
-4. Open new terminal window and execute:  `docker exec -it apromore /bin/bash`
+4. Open new terminal window and execute:  `sudo docker exec -it apromore /bin/bash`
 5. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties line #45 from site.externalport = 80 to your desired port number using vim
 6. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/configuration/tomcat-server.xml line #30 to your desired port number using vim
 
@@ -91,8 +82,8 @@ Run following script to remove the Apromore Docker container images from your sy
 
 ***Please backup your work before uninstall Apromore Docker. See [instruction](# Caveats) below on how to backup and restore user data.***
 
->Linux / Mac - run `remove` 
->Windows - run `remove.bat`  
+* For Linux / Mac, execute `sudo ./remove` command. 
+* For Windows - run `remove.bat`  
  
 
 # Caveats
@@ -109,6 +100,13 @@ Apromore Docker creates a data directory on the host system (outside the docker 
 We suggest user to backup MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) before uninstall Apromore Docker.
 
 Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) with backup after Apromore Docker installation if you want to restore data.
+
+
+##Virgo Admin Console (Security)
+* For security purpose, it is advisable to deactivate the virgo admin console.
+* Open new terminal window and execute:  `sudo docker exec -it apromore /bin/bash`.
+* Navigate to the `/opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/pickup/` and delete `org.eclipse.virgo.management.console_3.6.4.RELEASE.jar`.
+
 
 # Issues
 
