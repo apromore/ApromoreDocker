@@ -79,7 +79,7 @@ Run following script to remove the Apromore Docker container images from your sy
 ***Please backup your work before uninstall Apromore Docker. See [instructions](https://github.com/apromore/ApromoreDocker/tree/master#caveats) below on how to backup and restore user data.***
 
 * For Linux / Mac, execute `sudo ./remove` command. 
-* For Windows - run `remove.bat`  
+* For Windows execute `remove.bat` in command prompt.  
  
 
 # Caveats
@@ -96,7 +96,7 @@ We suggest user to backup MySQL database data folder (`/wherever/you/keep/Apromo
 
 Replace MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) with the backup folder after Apromore Docker installation if you want to restore data.
 
-Replace Events Log Repository data folder (`/wherever/you/keep/ApromoreDocker/Event-Logs-Repository`) with the backup folder after Apromore Docker installation if you want to restore data.
+Replace Events Log Repository data folder (`/wherever/you/keep/ApromoreDocker/Event-Logs-Repository`) with the backup folder after Apromore Docker installation.
 
 ## Change Heap Size (optional) 
 User can change Apromore heap size by modifying line 7 `JAVA_OPTS: "-server -Xmx8g -Xmn1g"` in `site.properties` file present in the `/ApromoreDocker` directory.
