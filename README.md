@@ -56,7 +56,7 @@ Once Apromore Docker started the logs will print the following messages:
 The logs will indicate that your application is running.  
 
 Open Apromore Web UI: [http://localhost:80](http://localhost:80).  
-Use credentials `testuser/testuser` to login.
+Use credentials `admin/password` to login.
 
 ## Stop Apromore Docker
 
@@ -68,13 +68,9 @@ Run following script to stop the Apromore Docker containers.  Your saved works o
 
 ## Change Port number:
 ### If you desire to change the default port number from 80, follow these steps:
-1. Stop Apromore.
-2. Change port number in docker-compose.yml from 80:9000 to NewPortNumber:9000
-3. Start Apromore.
-4. Open new terminal window and execute:  `sudo docker exec -it apromore /bin/bash`
-5. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties line #45 from site.externalport = 80 to your desired port number using vim
-6. update opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/configuration/tomcat-server.xml line #30 to your desired port number using vim
-
+1. Stop Apromore by executing the `sudo ./stop` command.
+2. Change port number by modifying line 12 in docker-compose.yml from 80:9000 to NewPortNumber:9000
+3. Start Apromore by executing the `sudo ./start` command.
 
 ## Uninstall Apromore Docker
 
@@ -94,15 +90,25 @@ Apromore Docker creates a data directory on the host system (outside the docker 
 
 >MySQL database: `/wherever/you/keep/ApromoreDocker/mysql-data` 
 
-
 ## How to backup and restore data
 
 We suggest user to backup MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) before uninstall Apromore Docker.
 
 Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) with backup after Apromore Docker installation if you want to restore data.
 
+Overwrite Events Log Repository data folder (`/wherever/you/keep/ApromoreDocker/Event-Logs-Repository`) with backup after Apromore Docker installation if you want to restore data.
 
-##Virgo Admin Console (Security)
+## Change Heap Size (optional)
+User can change Apromore heap size by modifying line 7 `JAVA_OPTS: "-server -Xmx8g -Xmn1g"`
+
+## Use own Event-Logs-Repository
+In order to use your own Event-Logs-Repository, modify line 12 in docker-compose.yml `./[PATH_TO_LOG_REPO]:/opt/Event-Logs-Repository`
+## Share file to all users (optional)
+
+* By default Apromore does not allow you to share a file with all users (i.e. the "public" group is not supported by default). You can change this by editing the site.properties file present in the "/ApromoreDocker/" directory. Specifically, to enable the option to share files and folders with the “public” group, you should set “security.publish.enable = true” in the site.properties file.
+
+
+## Virgo Admin Console (Security)
 * For security purpose, it is advisable to deactivate the virgo admin console.
 * Open new terminal window and execute:  `sudo docker exec -it apromore /bin/bash`.
 * Navigate to the `/opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/pickup/` and delete `org.eclipse.virgo.management.console_3.6.4.RELEASE.jar`.
