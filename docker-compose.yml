@@ -17,8 +17,8 @@ services:
         container_name: apromoresql
         command: --max_allowed_packet=2G
         environment:
-            MYSQL_ROOT_PASSWORD: MAcri
             MYSQL_DATABASE: apromore
+            MYSQL_ROOT_PASSWORD: MAcri
             MYSQL_USER: apromore
             MYSQL_PASSWORD: MAcri
         volumes:
