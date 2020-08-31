@@ -76,7 +76,7 @@ Run following script to stop the Apromore Docker containers.  Your saved works o
 
 Run following script to remove the Apromore Docker container images from your system.  Afterwards you can delete the ApromoreDocker-*version* folder.
 
-***Please backup your work before uninstall Apromore Docker. See [instruction](# Caveats) below on how to backup and restore user data.***
+***Please backup your work before uninstall Apromore Docker. See [instructions](https://github.com/apromore/ApromoreDocker/tree/master#caveats) below on how to backup and restore user data.***
 
 * For Linux / Mac, execute `sudo ./remove` command. 
 * For Windows - run `remove.bat`  
