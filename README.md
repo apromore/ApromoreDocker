@@ -101,7 +101,7 @@ Overwrite Events Log Repository data folder (`/wherever/you/keep/ApromoreDocker/
 ## Change Heap Size (optional) 
 User can change Apromore heap size by modifying line 7 `JAVA_OPTS: "-server -Xmx8g -Xmn1g"` in `site.properties` file.
 
-## Use own Event-Logs-Repository
+## Use own Event-Logs-Repository (optional)
 In order to use your own Event-Logs-Repository, modify line 12 in `docker-compose.yml` file to `./[PATH_TO_LOG_REPO]:/opt/Event-Logs-Repository`
 ## Share file to all users (optional)
 
