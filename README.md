@@ -69,7 +69,7 @@ Run following script to stop the Apromore Docker containers.  Your saved works o
 ## Change Port number:
 ### If you desire to change the default port number from 80, follow these steps:
 1. Stop Apromore by executing the `sudo ./stop` command.
-2. Change port number by modifying line 12 in docker-compose.yml from 80:9000 to NewPortNumber:9000
+2. Change port number by modifying line 12 in `docker-compose.yml` from 80:9000 to NewPortNumber:9000
 3. Start Apromore by executing the `sudo ./start` command.
 
 ## Uninstall Apromore Docker
@@ -98,11 +98,11 @@ Overwrite MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-d
 
 Overwrite Events Log Repository data folder (`/wherever/you/keep/ApromoreDocker/Event-Logs-Repository`) with backup after Apromore Docker installation if you want to restore data.
 
-## Change Heap Size (optional)
-User can change Apromore heap size by modifying line 7 `JAVA_OPTS: "-server -Xmx8g -Xmn1g"`
+## Change Heap Size (optional) 
+User can change Apromore heap size by modifying line 7 `JAVA_OPTS: "-server -Xmx8g -Xmn1g"` in `site.properties` file.
 
 ## Use own Event-Logs-Repository
-In order to use your own Event-Logs-Repository, modify line 12 in docker-compose.yml `./[PATH_TO_LOG_REPO]:/opt/Event-Logs-Repository`
+In order to use your own Event-Logs-Repository, modify line 12 in `docker-compose.yml` file to `./[PATH_TO_LOG_REPO]:/opt/Event-Logs-Repository`
 ## Share file to all users (optional)
 
 * By default Apromore does not allow you to share a file with all users (i.e. the "public" group is not supported by default). You can change this by editing the site.properties file present in the "/ApromoreDocker/" directory. Specifically, to enable the option to share files and folders with the “public” group, you should set “security.publish.enable = true” in the site.properties file.
