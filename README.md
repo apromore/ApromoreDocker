@@ -92,7 +92,7 @@ Apromore Docker creates a data directory on the host system (outside the docker 
 
 ## How to backup and restore data
 
-We suggest user to backup MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) before uninstall Apromore Docker.
+We suggest user to backup MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) and Event-Logs-Repository folder (`/wherever/you/keep/ApromoreDocker/Event-Logs-Repository`) before uninstalling Apromore Docker.
 
 Replace MySQL database data folder (`/wherever/you/keep/ApromoreDocker/mysql-data`) with the backup folder after Apromore Docker installation if you want to restore data.
 
