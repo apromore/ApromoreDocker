@@ -47,7 +47,7 @@ Docker Desktop - Mac works on OS X Sierra 10.12 and newer macOS releases. You ca
 Run following script to start the Apromore Docker containers, it may take few minutes the first time your run this.  
 
 * For Linux / Mac, execute `sudo ./start` command.
-* For Windows, execute `start.bat` command in the command prompt or double click the `start.bat` file. **Note:** Make sure the local directory of the docker folder is added in the Docker Desktop app so that it can mounted into Docker containers. This can be done by navigating to `Settings>Resources>File Sharing`. 
+* For Windows, execute `start.bat` command in the command prompt or double click the `start.bat` file. **Note:** Make sure the local directory of the docker folder is added in the Docker Desktop app so that it can mounted into Docker containers. This can be done by navigating to `Settings>Resources>File Sharing` in the Docker Deskop App. 
   
 
 Once Apromore Docker started the logs will print the following messages:  
