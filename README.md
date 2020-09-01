@@ -24,7 +24,7 @@ This is a distribution of Apromore Core that runs in Docker container and includ
 
 ### Download Apromore Docker
 * Check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
-* Check out git checkout tags/v7.15
+* Check out `git checkout tags/v7.15`
 
 ### Install Docker
 
