@@ -21,17 +21,22 @@ services:
     apromore:
         image: apromore/community:7.15
         container_name: apromore
-        depends_on:
-            - apromoresql
+        environment:
+            JAVA_OPTS: "-server -Xmx8g -Xmn1g"
+        volumes:
+            - "./site.properties:/opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties"
+            - "./Event-Logs-Repository:/opt/Event-Logs-Repository"
         ports:
             - "80:9000"
+        depends_on:
+            - apromoresql
     apromoresql:
         image: mysql:5.7
         container_name: apromoresql
         command: --max_allowed_packet=2G
         environment:
-            MYSQL_ROOT_PASSWORD: MAcri
             MYSQL_DATABASE: apromore
+            MYSQL_ROOT_PASSWORD: MAcri
             MYSQL_USER: apromore
             MYSQL_PASSWORD: MAcri
         volumes:
