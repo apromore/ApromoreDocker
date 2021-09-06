@@ -24,7 +24,7 @@ Use credentials `admin/password` to login.
 Run following script to stop the Apromore Docker containers.  Your saved works on Apromore Docker will still be there next time you start it.  
 `sudo docker-compose down`
 
-## Change Port number:
+## Change Port number
 ### If you desire to change the default port number from 80, follow these steps:
 1. Stop Apromore `sudo docker-compose down`.
 2. Change port number in docker-compose.yml from 80:8181 to NewPortNumber:8181
