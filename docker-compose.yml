@@ -1,60 +1,53 @@
-# This file is part of "Apromore Core".
-#
-# Copyright (C) 2018 - 2020, Apromore Pty Ltd.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Lesser General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Lesser Public License for more details.
-#
-# You should have received a copy of the GNU General Lesser Public
-# License along with this program.  If not, see
-# <http://www.gnu.org/licenses/lgpl-3.0.html>.
-
+# Docker compose to deploy Apromore enterprise on the host server.
 version: "3.7"
-services:
-    apromore:
-        image: apromore/community:7.15
-        container_name: apromore
-        environment:
-            JAVA_OPTS: "-server -Xmx8g -Xmn1g"
-        networks:
-            - overlay
-        volumes:
-            - ./site.properties:/opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/repository/usr/site.properties
-            - event-log-data:/opt/apromore/Event-Logs-Repository
-        ports:
-            - "80:9000"
-        depends_on:
-            - apromoresql
-        restart: always
-    
-    # MySql        
-    apromoresql:
-        image: mysql:5.7
-        container_name: apromoresql
-        command: --max_allowed_packet=2G
-        networks:
-            - overlay
-        environment:
-            MYSQL_DATABASE: apromore
-            MYSQL_ROOT_PASSWORD: MAcri
-            MYSQL_USER: apromore
-            MYSQL_PASSWORD: MAcri
-        volumes:
-            - "./mysql-data:/var/lib/mysql" 
-        ports:
-            - 3306:3306
-        restart: always
 
+# Apromore Enterprise
+services:
+  apromore-ee:
+    image: ${APROMORE_IMAGE}
+    container_name: apromore-core
+    environment:
+      JAVA_OPTS: "-server -Xmx20g -Xmn1g"
+    networks:
+       - overlay
+    volumes:
+      - event-log-data:/home/ubuntu/.apromore/Event-Logs-Repository/log
+      - ./config/site.cfg:/opt/apache-karaf/etc/site.cfg 
+      - ./config/web.cfg:/opt/apache-karaf/etc/org.ops4j.pax.web.cfg  
+    ports:
+      - 80:8181
+    depends_on:
+      apromore-sql:
+       condition: service_healthy
+    restart: always
+
+  # MySql
+  apromore-sql:
+    image: ${MYSQL_IMAGE}
+    container_name: apromore-sql
+    command: --max_allowed_packet=2G
+    networks:
+       - overlay
+    environment:
+      MYSQL_DATABASE: apromore
+      MYSQL_ROOT_PASSWORD: MAcri
+    volumes:
+      - ./config/init.sql:/docker-entrypoint-initdb.d/init.sql      
+      - db-data:/var/lib/mysql
+    ports:
+      - 3306:3306      
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10 
+    restart: always
+
+# Volumes    
 volumes:
-   event-log-data:
-  
+  db-data:
+  event-log-data:
+
+# Network
 networks:
-  overlay:
-          
+    overlay:
+  

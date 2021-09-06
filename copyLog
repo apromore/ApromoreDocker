@@ -1,3 +1,0 @@
-cd "$(dirname "$0")"
-
-docker cp apromore:/opt/apromore/virgo-tomcat-server-3.6.4.RELEASE/serviceability/logs/log.log log.log

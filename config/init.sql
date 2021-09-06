@@ -1,0 +1,5 @@
+CREATE USER 'apromore'@'%' IDENTIFIED BY 'MAcri';
+GRANT SELECT, INSERT, UPDATE, DELETE, LOCK TABLES, EXECUTE, SHOW VIEW ON apromore.* TO 'apromore'@'%';
+CREATE USER 'liquibase_user'@'%' IDENTIFIED BY '7fHJV41fpJ';
+GRANT ALL PRIVILEGES ON apromore.* TO 'liquibase_user'@'%';
+FLUSH PRIVILEGES;
