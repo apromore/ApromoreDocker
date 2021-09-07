@@ -12,8 +12,7 @@ services:
        - overlay
     volumes:
       - event-log-data:/home/ubuntu/.apromore/Event-Logs-Repository/log
-      - ./config/site.cfg:/opt/apache-karaf/etc/site.cfg 
-      - ./config/web.cfg:/opt/apache-karaf/etc/org.ops4j.pax.web.cfg  
+      - ./config/site.cfg:/opt/apache-karaf/etc/site.cfg   
     ports:
       - 80:8181
     depends_on:
