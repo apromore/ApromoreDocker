@@ -1,27 +1,29 @@
 ![apromore](https://apromore.org/wp-content/uploads/2021/08/Apromore-banner_red.png "apromore")
 
 # Apromore Open Source Docker
-This is an open source distribution of Apromore that runs as a Docker container. * <b>Note:</b> These instructions are tested with Linux Ubuntu 20.04. 
+This is an open source distribution of Apromore that runs as a Docker container. 
+Please note that these instructions are tested with Linux Ubuntu 20.04. 
 
 ## Pre-requisites
-For Ubuntu, install:
+- Linux Ubuntu 20.04
+- For Ubuntu, install:
 1. [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
 2. [Docker Compose](https://docs.docker.com/compose/install/)
 
-## Run Apromore Docker
+## Check out
 * Check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
+* Browse to the directory `cd ApromoreDocker`
 * Check out `git checkout release/v7.21`
 
 ## Start Apromore Docker
-Run following script to start the Apromore Docker containers, it may take few minutes the first time your run this.  
+- Run the following command.  
  `sudo docker-compose up -d`
 
 Open Apromore Web UI: [http://localhost:80](http://localhost:80)
 Use credentials `admin/password` to login.
 
 ## Stop Apromore Docker
-
-Run following script to stop the Apromore Docker containers.  Your saved works on Apromore Docker will still be there next time you start it.  
+- Run the following command to stop Apromore.
 `sudo docker-compose down`
 
 ## Change Port number
@@ -41,7 +43,7 @@ Before doing a fresh installation or upgrading to a new version of Apromore – 
 
 ### To backup DB data:
 * Enter the mysql docker container `sudo docker exec -it apromore-sql bash`
-* Run the following command. When prompted for password, enter ‘MAcri’ - `mysqldump --databases apromore -u root -p > backupdb.sql`
+* Run the following command - `mysqldump --databases apromore -u root -p > backupdb.sql`. When prompted for password, enter ‘MAcri’.
 * Exit the mysql container
 * Copy the backup.sql file from the container to your desired location - `sudo docker cp apromore-sql:/backupdb.sql /home/ubuntu/`
 
@@ -55,10 +57,10 @@ After doing a fresh installation or upgrading to a new version of Apromore – r
 ### To restore DB data:
 * Copy the `backupdb.sql` to the mysql container - `sudo docker cp backupdb.sql apromore-sql:/backupdb.sql`
 * Enter the mysql docker container - `sudo docker exec -it apromore-sql bash`
-* Run the following command. When prompted for password, enter ‘MAcri’ - `mysql -u root -p`
+* Run the following command - `mysql -u root -p`. When prompted for password, enter ‘MAcri’.
 * Drop the apromore database - `drop database apromore`
 * Exit the mysql prompt
-* Run the following command to restore the backupdb.sql. When prompted for password, enter ‘MAcri’ - `mysql -u root -p < backupdb.sql`
+* Run the following command to restore the backupdb.sql - `mysql -u root -p < backupdb.sql`.  When prompted for password, enter ‘MAcri’
 
 ### To restore event logs: 
 * Unzip the backuplogs.zip and store it in the volume created. - `sudo unzip backuplogs.zip -d /var/lib/docker/volumes/opensourcedocker_event-log-data/_data`
