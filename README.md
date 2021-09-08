@@ -48,7 +48,7 @@ Before doing a fresh installation or upgrading to a new version of Apromore – 
 * Copy the backup.sql file from the container to your desired location - `sudo docker cp apromore-sql:/backupdb.sql /home/ubuntu/`
 
 ### To backup Event Logs:
-* Go to the following directory - `cd /var/lib/docker/volumes/opensourcedocker_event-log-data/_data`
+* Go to the following directory - `cd /var/lib/docker/volumes/opensource721_event-log-data/_data`
 * Zip the event logs and move it to a folder - `sudo zip -r /home/ubuntu/backuplogs.zip .`
 
 ## Restore DB data and Event Logs
@@ -63,6 +63,6 @@ After doing a fresh installation or upgrading to a new version of Apromore – r
 * Run the following command to restore the backupdb.sql - `mysql -u root -p < backupdb.sql`.  When prompted for password, enter ‘MAcri’
 
 ### To restore event logs: 
-* Unzip the backuplogs.zip and store it in the volume created. - `sudo unzip backuplogs.zip -d /var/lib/docker/volumes/opensourcedocker_event-log-data/_data`
+* Unzip the backuplogs.zip and store it in the volume created. - `sudo unzip backuplogs.zip -d /var/lib/docker/volumes/opensource721_event-log-data/_data`
 
 After restoring all the data, restart the Apromore container - `sudo docker start apromore-core`
