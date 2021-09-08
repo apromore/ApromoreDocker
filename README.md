@@ -16,6 +16,7 @@ Please note that these instructions are tested with Linux Ubuntu 20.04.
 * Check out `git checkout release/v7.21`
 
 ## Start Apromore Docker
+- Browse to the directory `cd opensource7.21`
 - Run the following command.  
  `sudo docker-compose up -d`
 
