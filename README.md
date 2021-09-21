@@ -10,8 +10,8 @@ Please note that these instructions are tested with Linux Ubuntu 20.04.
 * Docker Compose
 
 For Ubuntu, the instructions for downloading Docker Engine and Docker compose are below:
-** [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
-** [Docker Compose](https://docs.docker.com/compose/install/)
+* [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Check out
 * Check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
