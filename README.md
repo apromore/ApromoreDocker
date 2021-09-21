@@ -5,10 +5,13 @@ This is an open source distribution of Apromore that runs as a Docker container.
 Please note that these instructions are tested with Linux Ubuntu 20.04. 
 
 ## Pre-requisites
-- Linux Ubuntu 20.04
-- For Ubuntu, install:
-1. [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
-2. [Docker Compose](https://docs.docker.com/compose/install/)
+* Linux Ubuntu 20.04, Windows 10/WS2016/WS2019, Mac OSX 10.8 or newer.
+* Docker Engine
+* Docker Compose
+
+For Ubuntu, the instructions for downloading Docker Engine and Docker compose are below:
+** [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
+** [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Check out
 * Check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
