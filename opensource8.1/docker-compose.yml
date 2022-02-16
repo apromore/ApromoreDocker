@@ -1,7 +1,7 @@
-# Docker compose to deploy Apromore enterprise on the host server.
+# Docker compose to deploy Apromore core on the host server.
 version: "3.7"
 
-# Apromore Enterprise
+# Apromore Core
 services:
   apromore-ee:
     image: ${APROMORE_IMAGE}
@@ -11,8 +11,9 @@ services:
     networks:
        - overlay
     volumes:
-      - event-log-data:/home/ubuntu/.apromore/Event-Logs-Repository/log
-      - ./config/site.cfg:/opt/apache-karaf/etc/site.cfg   
+      - data-repository:/home/ubuntu/.apromore/Repository
+    env_file:
+      - .env     
     ports:
       - 80:8181
     depends_on:
@@ -43,8 +44,8 @@ services:
 
 # Volumes    
 volumes:
+  data-repository:
   db-data:
-  event-log-data:
 
 # Network
 networks:
