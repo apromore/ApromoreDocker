@@ -16,10 +16,10 @@ For Ubuntu, the instructions for downloading Docker Engine and Docker compose ar
 ## Check out
 * Check out the source code using git: `git clone https://github.com/apromore/ApromoreDocker.git`
 * Browse to the directory `cd ApromoreDocker`
-* Check out `git checkout release/v7.21`
+* Check out `git checkout release/v8.1`
 
 ## Start Apromore Docker
-- Browse to the directory `cd opensource7.21`
+- Browse to the directory `cd opensource8.1`
 - Run the following command.  
  `sudo docker-compose up -d`
 
@@ -40,9 +40,9 @@ Use credentials `admin/password` to login.
 ## Backup DB Data and Event Logs
 Apromore stores its data objects in two places:
 1. Database: all data, except the event logs
-2. Event logs which are by default located in the top-level “Event-Logs-Repository” directory.
+2. Event logs which are by default located in the top-level “Repository” directory.
 
-The MySQL database and Event-Logs -Repository are mounted to the volume. If you do not want to delete the volumes, then the data will be available even after a fresh install of Apromore open source version. However, it is still recommended to take backup before doing any upgrade/installation.
+The MySQL database and Repository are mounted to the volume. If you do not want to delete the volumes, then the data will be available even after a fresh install of Apromore open source version. However, it is still recommended to take backup before doing any upgrade/installation.
 Before doing a fresh installation or upgrading to a new version of Apromore – backup the DB and Event logs
 
 ### To backup DB data:
@@ -52,7 +52,7 @@ Before doing a fresh installation or upgrading to a new version of Apromore – 
 * Copy the backup.sql file from the container to your desired location - `sudo docker cp apromore-sql:/backupdb.sql /home/ubuntu/`
 
 ### To backup Event Logs:
-* Go to the following directory - `cd /var/lib/docker/volumes/opensource721_event-log-data/_data`
+* Go to the following directory - `cd /var/lib/docker/volumes/opensource81_data-repository/_data`
 * Zip the event logs and move it to a folder - `sudo zip -r /home/ubuntu/backuplogs.zip .`
 
 ## Restore DB data and Event Logs
@@ -67,6 +67,6 @@ After doing a fresh installation or upgrading to a new version of Apromore – r
 * Run the following command to restore the backupdb.sql - `mysql -u root -p < backupdb.sql`.  When prompted for password, enter ‘MAcri’
 
 ### To restore event logs: 
-* Unzip the backuplogs.zip and store it in the volume created. - `sudo unzip backuplogs.zip -d /var/lib/docker/volumes/opensource721_event-log-data/_data`
+* Unzip the backuplogs.zip and store it in the volume created. - `sudo unzip backuplogs.zip -d /var/lib/docker/volumes/opensource81_data-repository/_data`
 
 After restoring all the data, restart the Apromore container - `sudo docker start apromore-core`
